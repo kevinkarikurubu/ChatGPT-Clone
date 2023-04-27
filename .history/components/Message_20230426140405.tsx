@@ -1,0 +1,25 @@
+/* eslint-disable @next/next/no-img-element */
+import { DocumentData } from 'firebase/firestore'
+import React from 'react'
+
+type Props = {
+    message: DocumentData
+}
+
+function Message({message} : Props) {
+    const isChatGPT = message.user.name === 'ChatGPT'
+
+  return (
+    <div className="">
+        <div className="flex space-x-4 max-w-2xl mx-auto">
+            <img src={message.user.avatar} alt="avatae" className="h-7 w-7"
+                />
+            <p className="text-sm text-white pt-1">
+                {message.text}
+            </p>
+        </div>
+    </div>
+  )
+}
+
+export default Message

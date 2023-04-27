@@ -1,0 +1,19 @@
+import React from 'react'
+'use client'
+import { signIn } from 'next-auth/react'
+import Image from 'next/image'
+
+function Login() {
+  return (
+    <div>
+        <Image
+            src='/chatLogo'
+            alt='logo'
+            width={300}
+            height={300}
+        />
+    </div>
+  )
+}
+
+export default Login

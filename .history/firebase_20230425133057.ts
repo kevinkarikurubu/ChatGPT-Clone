@@ -1,0 +1,1 @@
+import { initializeApp, getApp } from 'firebase/app'

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+layer components {
+  .inforText {
+    @apply p-4 rounded-lg bg-gray-700/50 max-w-[300px]
+  }
+  .newChat {
+    @apply border border-gray-700 rounded-lg px-5 py-3 flex items-center justify-center text-sm text-gray-400 space-x-2 hover:bg-gray-700/70 transition-all duration-200 ease-out
+  }
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
